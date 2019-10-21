@@ -10,7 +10,9 @@ namespace RussianRoulette
     public class LogicClass
     {
         int Bullet;
-         public void LoadLogic() //loading the gun
+        int points = 0;
+
+        public void LoadLogic() //loading the gun
         {
             Bullet = 6;
         }
@@ -21,13 +23,16 @@ namespace RussianRoulette
             Bullet = rand.Next(1, 7); //setting a range
             return Bullet; 
         }
+
         int chances = 4; // chances to shoot on head
+        int ChancesAway = 2; //chances to shoot away
+
         public int ShootLogic()
-        {            //
+        {            
             if (Bullet == 1)
             {
                 // the user is dead!
-                MessageBox.Show("You are dead, do you want to play again?","Game Over!");
+                MessageBox.Show("You are dead and you scored zero points! do you want to play again?","Game Over!");
                 Application.Restart();
             }
             else
@@ -35,9 +40,16 @@ namespace RussianRoulette
                 chances--;
                 Bullet--;
                 //if chances of shooting at your head is zero, tell him you survived unless tell him keep playing
-                if (chances == 0)
+                if (chances == 0 && ChancesAway == 2)
                 {
-                    MessageBox.Show("You win!!! Congrats! Do you want to play again?", "Game Over!");
+                    points = 10;
+                    MessageBox.Show("You win!!! Congrats! You got " + points + " points! Do you want to play again?", "Game Over!");
+                    Application.Restart();
+                }
+                else if(chances == 0 && ChancesAway == 1)
+                {
+                    points = 5;
+                    MessageBox.Show("You win!!! Congrats! You got " + points + " points! Do you want to play again?", "Game Over!");
                     Application.Restart();
                 }
                 else
@@ -46,14 +58,23 @@ namespace RussianRoulette
                 }
             }
             return chances;
+
         }
-        int ChancesAway = 2;
+
         public int ShootAwayLogic()
         {
-            if (Bullet == 1)
+            if (Bullet == 1 && ChancesAway == 2)
             {
                 //tell the user you died!
-                MessageBox.Show("You survive");
+                points = 10;
+                MessageBox.Show("You survive! You got " + points + " points");
+                Application.Restart();
+                
+            }
+            else if(Bullet == 1 && ChancesAway == 1)
+            {
+                MessageBox.Show("You survive! You got " + points + " points");
+                points = 5;
             }
             else
             {                
@@ -62,7 +83,7 @@ namespace RussianRoulette
                 //if chances are zero tell him you are dead else tell him keep playing
                 if(ChancesAway == 0)
                 {
-                    MessageBox.Show("You have lost all chances of survival, do you want to play again?","Game Over");
+                    MessageBox.Show("You have lost all chances of survival, you scored "+points + " points do you want to play again?","Game Over");
                     Application.Restart();
                 }
                 else
