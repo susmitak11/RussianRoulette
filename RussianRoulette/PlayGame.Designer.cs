@@ -1,6 +1,6 @@
 ﻿namespace RussianRoulette
 {
-    partial class Form2
+    partial class PlayGameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -116,7 +116,7 @@
             this.ShootAway.UseVisualStyleBackColor = true;
             this.ShootAway.Click += new System.EventHandler(this.ShootAway_Click);
             // 
-            // Form2
+            // PlayGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,8 +129,8 @@
             this.Controls.Add(this.Spin);
             this.Controls.Add(this.LoadBtn);
             this.Controls.Add(this.LoadImg);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "PlayGameForm";
+            this.Text = "PlayGame";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.LoadImg)).EndInit();
             this.ResumeLayout(false);

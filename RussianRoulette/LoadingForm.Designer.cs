@@ -1,6 +1,6 @@
 ﻿namespace RussianRoulette
 {
-    partial class Form1
+    partial class LoadingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -95,7 +95,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // LoadingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,8 +105,8 @@
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.RussianRoulette);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "LoadingForm";
+            this.Text = "LoadingForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

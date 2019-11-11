@@ -12,11 +12,11 @@ using System.Media;//this is used to implement media in the game
 
 namespace RussianRoulette// this is the name given to the project(game)
 {
-    public partial class Form2 : Form
+    public partial class PlayGameForm : Form
     {   //defining the class 
         LogicClass logic = new LogicClass();
 
-        public Form2()
+        public PlayGameForm()
         {
             InitializeComponent();
         }
