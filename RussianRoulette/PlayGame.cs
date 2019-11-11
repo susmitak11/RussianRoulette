@@ -47,7 +47,7 @@ namespace RussianRoulette// this is the name given to the project(game)
             LoadImg.Image = RussianRoulette.Resource1.ShootHead;
             SoundPlayer sp = new SoundPlayer(RussianRoulette.Resource1.FireSound);
             sp.Play();
-            int chances = logic.ShootLogic();//calling the shoot logic to work
+            logic.ShootLogic();//calling the shoot logic to work
         }
         //ShootAway
         private void ShootAway_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace RussianRoulette// this is the name given to the project(game)
             LoadImg.Image = RussianRoulette.Resource1.fire;
             SoundPlayer sp = new SoundPlayer(RussianRoulette.Resource1.FireSound);
             sp.Play();
-            int ChancesAway = logic.ShootAwayLogic();//calling the shootaway logic to act
+            logic.ShootAwayLogic();//calling the shootaway logic to act
         }
 
         private void PlayAgain_Click(object sender, EventArgs e)
